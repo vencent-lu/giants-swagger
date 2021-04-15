@@ -11,7 +11,15 @@ public class Parameter {
 	
 	private Class<?> type;
 	private String name;
-	
+
+	public Parameter() {
+	}
+
+	public Parameter(Class<?> type, String name) {
+		this.type = type;
+		this.name = name;
+	}
+
 	public Class<?> getType() {
 		return type;
 	}
