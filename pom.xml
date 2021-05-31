@@ -102,7 +102,7 @@
     <!-- 项目版本定义 -->
     <project-name>giants-swagger</project-name>
 	<springfox.version>2.9.2</springfox.version>
-	<jackson.version>2.4.5</jackson.version>
+	<jackson.version>2.12.3</jackson.version>
 	<spring.version>4.2.5.RELEASE</spring.version>
 
     <!-- Plugin的属性定义 -->
