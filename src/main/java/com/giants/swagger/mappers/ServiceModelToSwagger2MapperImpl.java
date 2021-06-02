@@ -72,12 +72,10 @@ public class ServiceModelToSwagger2MapperImpl extends springfox.documentation.sw
             while (iterator.hasNext()) {
                 Map.Entry<String, Response> entry = iterator.next();
                 Response response = entry.getValue();
-                if (response.getSchema() != null) {
-                    ObjectProperty resultProperty =
-                            (ObjectProperty)this.propertyModelConverter.modelToProperty((Model)this.resultModel.clone());
-                    resultProperty.property(this.giantsSwaggerProperties.getReturnResultClass().getDataProperty(), response.getSchema());
-                    response.setSchema(resultProperty);
-                }
+                ObjectProperty resultProperty =
+                        (ObjectProperty)this.propertyModelConverter.modelToProperty((Model)this.resultModel.clone());
+                resultProperty.property(this.giantsSwaggerProperties.getReturnResultClass().getDataProperty(), response.getSchema());
+                response.setSchema(resultProperty);
             }
         }
     }

@@ -1,5 +1,7 @@
 package com.giants.swagger.factory.support;
 
+import com.giants.common.collections.CollectionUtils;
+import com.giants.swagger.configuration.GiantsSwaggerProperties;
 import com.giants.swagger.mappers.ServiceModelToSwagger2MapperImpl;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
@@ -7,6 +9,9 @@ import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
 import org.springframework.stereotype.Component;
+import springfox.documentation.spi.service.contexts.Defaults;
+
+import javax.annotation.Resource;
 
 /**
  * SwaggerBeanDefinitionRegistryPostProcessor TODO
@@ -18,6 +23,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class GiantsSwaggerBeanDefinitionRegistryPostProcessor implements BeanDefinitionRegistryPostProcessor {
+
+    @Resource
+    private GiantsSwaggerProperties giantsSwaggerProperties;
+
     @Override
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
         registry.removeBeanDefinition("serviceModelToSwagger2MapperImpl");
@@ -29,6 +38,11 @@ public class GiantsSwaggerBeanDefinitionRegistryPostProcessor implements BeanDef
 
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-
+        /*GiantsSwaggerProperties giantsSwaggerProperties = (GiantsSwaggerProperties)beanFactory.getBean(
+                "giantsSwaggerProperties");
+        if (CollectionUtils.isNotEmpty(giantsSwaggerProperties.getIgnorableParameterTypes())) {
+            Defaults defaults = beanFactory.getBean(Defaults.class);
+            defaults.defaultIgnorableParameterTypes().addAll(giantsSwaggerProperties.getIgnorableParameterTypes());
+        }*/
     }
 }

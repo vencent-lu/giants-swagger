@@ -2,7 +2,6 @@ package com.giants.swagger.springfox.plugin;
 
 import com.fasterxml.classmate.TypeResolver;
 import com.giants.swagger.configuration.GiantsSwaggerProperties;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;

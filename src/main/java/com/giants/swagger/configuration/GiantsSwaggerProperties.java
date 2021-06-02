@@ -13,13 +13,22 @@ import java.util.List;
  * @author vencent-lu
  * @since 1.0
  */
-@Component
 @ConfigurationProperties(prefix = "giants.swagger")
 public class GiantsSwaggerProperties {
+
+    private List<Class> ignoreParameterTypes;
 
     private List<String> ignoreModelPropertyNames;
 
     private ReturnResultClass returnResultClass;
+
+    public List<Class> getIgnoreParameterTypes() {
+        return ignoreParameterTypes;
+    }
+
+    public void setIgnoreParameterTypes(List<Class> ignoreParameterTypes) {
+        this.ignoreParameterTypes = ignoreParameterTypes;
+    }
 
     public List<String> getIgnoreModelPropertyNames() {
         return ignoreModelPropertyNames;

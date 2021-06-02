@@ -1,5 +1,7 @@
 package com.giants.swagger.configuration;
 
+import java.util.List;
+
 /**
  * ReturnResultClass TODO
  * date time: 2021/5/29 11:02
@@ -12,14 +14,6 @@ public class ReturnResultClass {
 
     private Class<?> type;
     private String dataProperty;
-
-    public ReturnResultClass() {
-    }
-
-    public ReturnResultClass(Class<?> type, String dataProperty) {
-        this.type = type;
-        this.dataProperty = dataProperty;
-    }
 
     public Class<?> getType() {
         return type;
@@ -36,4 +30,5 @@ public class ReturnResultClass {
     public void setDataProperty(String dataProperty) {
         this.dataProperty = dataProperty;
     }
+
 }
