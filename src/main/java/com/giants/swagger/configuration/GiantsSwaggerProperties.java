@@ -1,6 +1,7 @@
 package com.giants.swagger.configuration;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class GiantsSwaggerProperties {
 
     private List<String> ignoreModelPropertyNames;
 
+    @NestedConfigurationProperty
     private ReturnResultClass returnResultClass;
 
     public List<Class> getIgnoreParameterTypes() {
