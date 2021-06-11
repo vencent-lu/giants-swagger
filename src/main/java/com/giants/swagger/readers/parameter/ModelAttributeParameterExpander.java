@@ -1,5 +1,6 @@
 package com.giants.swagger.readers.parameter;
 
+import com.giants.common.collections.CollectionUtils;
 import com.giants.swagger.configuration.GiantsSwaggerProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -37,7 +38,8 @@ public class ModelAttributeParameterExpander extends springfox.documentation.spr
 
     @Override
     public List<Compatibility<springfox.documentation.service.Parameter, RequestParameter>> expand(ExpansionContext context) {
-        if (this.giantsSwaggerProperties.getIgnoreRequestParameterTypes().contains(context.getParamType().getErasedType())) {
+        if (CollectionUtils.isNotEmpty(this.giantsSwaggerProperties.getIgnoreRequestParameterTypes()) &&
+                this.giantsSwaggerProperties.getIgnoreRequestParameterTypes().contains(context.getParamType().getErasedType())) {
             return new ArrayList<>();
         }
         return super.expand(context);
