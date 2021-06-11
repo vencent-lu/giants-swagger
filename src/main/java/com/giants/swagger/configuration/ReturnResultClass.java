@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * ReturnResultClass TODO
  * date time: 2021/5/29 11:02
- * Copyright 2021 www.meikuangrm.com Inc. All rights reserved.
+ * Copyright 2021 github.com/vencent-lu/giants-swagger Inc. All rights reserved.
  *
  * @author vencent-lu
  * @since 1.0

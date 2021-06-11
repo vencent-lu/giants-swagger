@@ -11,7 +11,7 @@ import springfox.documentation.spi.service.contexts.Defaults;
 /**
  * GiantsSwaggerConfiguration TODO
  * date time: 2021/6/2 9:50
- * Copyright 2021 www.meikuangrm.com Inc. All rights reserved.
+ * Copyright 2021 github.com/vencent-lu/giants-swagger Inc. All rights reserved.
  *
  * @author vencent-lu
  * @since 1.0
