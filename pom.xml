@@ -103,7 +103,7 @@
     <project-name>giants-swagger</project-name>
 	<springfox.version>3.0.0</springfox.version>
 	<jackson.version>2.4.5</jackson.version>
-	<spring.boot.version>2.4.6</spring.boot.version>
+	<spring.boot.version>2.7.18</spring.boot.version>
 
     <!-- Plugin的属性定义 -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
